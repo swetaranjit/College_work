@@ -1,0 +1,38 @@
+Algorithm: Depth-Limited-Search(problem, limit)
+
+Start from the initial node.
+
+If the current node is the goal node, return success.
+
+If the depth limit = 0, return cutoff (cannot expand further).
+
+Otherwise:
+
+For each child node of the current node:
+
+Call Depth-Limited-Search(child, limit − 1).
+
+If the result is success, return success.
+
+If no solution is found within the limit, return failure.
+
+
+Algorithm: Iterative Deepening Depth First Search (IDDFS)
+
+Start from the initial node.
+
+Set depth limit = 0.
+
+Perform Depth-Limited Search (DLS) with the current depth limit.
+
+If the goal node is found, return success.
+
+If the goal is not found, increase the depth limit by 1.
+
+Repeat the Depth-Limited Search with the new depth limit.
+
+Continue increasing the depth limit and repeating the search.
+
+If the goal node is found at any depth, return success and the path.
+
+If the maximum depth is reached and the goal is still not found, return failure.
